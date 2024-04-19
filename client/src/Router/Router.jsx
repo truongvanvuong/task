@@ -1,52 +1,35 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "../Layout";
-import {
-  Home,
-  Completed,
-  InCompleted,
-  Important,
-  Login,
-  Register,
-} from "../Page";
+import { AllDiray, Borrow, Loan } from "../Page";
 const Routers = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/home" />} />
+      <Route path="/" element={<Navigate to="/all" />} />
       <Route
-        path="/home"
+        path="/all"
         element={
           <Layout>
-            <Home />
+            <AllDiray />
           </Layout>
         }
       />
       <Route
-        path="/completed"
+        path="/borrow"
         element={
           <Layout>
-            <Completed />
+            <Borrow />
           </Layout>
         }
       />
       <Route
-        path="/incompleted"
+        path="/loan"
         element={
           <Layout>
-            <InCompleted />
+            <Loan />
           </Layout>
         }
       />
-      <Route
-        path="/important"
-        element={
-          <Layout>
-            <Important />
-          </Layout>
-        }
-      />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
     </Routes>
   );
 };

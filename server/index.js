@@ -4,9 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import express from 'express';
 
-import authRouter from './Router/auth.js';
-import userRouter from './Router/user.js';
-import taskRouter from './Router/task.js';
+import diaryRouter from './Router/Diary.js';
 
 dotenv.config();
 const app = express();
@@ -29,12 +27,10 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser(corsOptions));
 app.get('/', (req, res) => {
-  res.send('Api is working task api');
+  res.send('Api is working diary borrow api');
 });
 
-app.use('/api/auth', authRouter);
-app.use('/api/task', taskRouter);
-app.use('/api/users', userRouter);
+app.use('/api/diary', diaryRouter);
 
 app.listen(port, () => {
   connect();

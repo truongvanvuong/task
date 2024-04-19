@@ -5,21 +5,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        light: "#141414",
-        dark: "#1f1f1f",
-        gray: "#262626",
+        dark: "#000000",
+        gray: "#141414",
         textHeaddingDark: "#FFFFFFD9",
         textDark: "#FFFFFFD9",
         secondaryTextDark: "#FFFFFFA6",
         defaultBorderDark: "#424242FF",
         separatorDark: "#FDFDFD1F",
-        primaryColor: "#fa8c16",
+        primaryColor: "#ec3237",
         headingColor: "#000000E0",
         textColor: "#000000E0",
         secondaryText: "#000000A6",
         defaultBorder: "#D9D9D9FF",
         separator: "#0505050F",
-        layoutBackground: "#F5F5F5FF",
       },
       boxShadow: {
         "3xl": "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;",

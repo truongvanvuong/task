@@ -1,19 +1,8 @@
 import Sidebar from "./Sidebar";
-import ListCard from "./ListCard/ListCard";
-import TitlePage from "./TitlePage/TitlePage";
+import HeadingPage from "./HeadingPage/HeadingPage";
 import Button from "./Button";
-import AuthForm from "./AuthForm";
 import Input from "./Input";
 import Modal from "./Modal";
-import Message from "./Message";
+import Table from "./Table";
 
-export {
-  Sidebar,
-  ListCard,
-  TitlePage,
-  Button,
-  AuthForm,
-  Input,
-  Modal,
-  Message,
-};
+export { Sidebar, HeadingPage, Button, Input, Modal, Table };

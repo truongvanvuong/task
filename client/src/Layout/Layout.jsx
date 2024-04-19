@@ -1,22 +1,17 @@
-import { useState } from "react";
-import { Sidebar } from "../Component";
-import { AccountSettings } from "../Page";
+import { Sidebar, Modal } from "../Component";
+
 const Layout = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="h-screen w-full dark:bg-dark">
-      <div className="flex gap-5 p-5 h-full">
-        <Sidebar setIsModalOpen={setIsModalOpen} />
+    <div className="h-screen w-full dark:bg-dark p-5">
+      <div className="flex xl:gap-5 h-full w-full">
+        <Sidebar />
         <main className="w-full h-full">
-          <div className="border border-defaultBorder w-full h-full shadow-lg dark:border-defaultBorderDark dark:bg-gray rounded-xl">
+          <div className="border border-defaultBorder w-full h-[calc(100vh-2.5rem)] shadow-xl dark:border-defaultBorderDark dark:bg-gray rounded-xl">
             <div className="py-6">{children}</div>
           </div>
         </main>
       </div>
-      <AccountSettings
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-      />
+      <Modal />
     </div>
   );
 };

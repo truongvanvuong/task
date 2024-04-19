@@ -10,6 +10,7 @@ const Input = ({
   messError,
   className,
   readOnly = false,
+  value,
   ...passProps
 }) => {
   const props = {
@@ -17,16 +18,19 @@ const Input = ({
     ...passProps,
   };
   return (
-    <div className={`w-full py-4 flex flex-col gap-2 ${className}`}>
+    <div className={`w-full flex flex-col gap-2 ${className}`}>
       <input
         id={id}
         readOnly={readOnly}
-        className={`w-full py-2 dark:bg-gray dark:text-textDark dark:border-defaultBorderDark border-b border-defaultBorder ${
-          readOnly ? null : "focus:border-primaryColor"
+        className={`w-full py-2 dark:bg-transparent dark:text-textDark dark:border-defaultBorderDark border-b border-defaultBorder ${
+          readOnly
+            ? null
+            : "focus:border-primaryColor dark:focus:border-primaryColor"
         } outline-none`}
         placeholder={placeholder}
         name={name}
         type={type}
+        value={value}
         {...props}
       />
       {messError && (
@@ -40,6 +44,7 @@ const Input = ({
 
 Input.propTypes = {
   className: PropTypes.string,
+  value: PropTypes.string,
   id: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
